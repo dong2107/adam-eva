@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Apple = function (weight) {
+        this.weight = weight;
+        this.decrease = function () {
+            this.weight = this.weight -1;
+        };
+        this.isEmpty = function () {
+            if (this.weight > 0){
+                return true;
+            }else {
+                return false;
+            }
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+    };
+    let Human = function (name,gender,weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.isMale = function () {
+            return this.gender;
+        };
+        this.setGender = function () {
+            this.gender = new gender;
+        };
+        this.checkApple = function () {
+            if (this.weight > 0){
+                return true;
+            }else {
+                return false;
+            }
+        };
+        this.eat = function (apple) {
+            if (apple.getWeight() > 0){
+                this.weight = this.weight + 1;
+            }
+            if (apple.getWeight() === 0){
+                console.log("het tao");
+            }
+            return apple.decrease();
+        };
+        this.say = function () {
+            console.log("apple");
+        };
+        this.getName = function () {
+            return this.name;
+        };
+        this.setName = function (new_name) {
+            this.name = new_name;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.setWeight = function (new_weight) {
+            this.weight = new_weight;
+        };
+    };
+    let apple = new Apple(10);
+    let adam = new Human("adam", "male", 60);
+    for (let i = 0; i < 5; i++) {
+        adam.eat(apple);
+        adam.getWeight();
+        adam.checkApple();
+        apple.getWeight();
+        adam.say();
+    }
+        let eva = new Human("eva", "female", 50);
+        for (let i = 0;i < 5; i++){
+            eva.eat(apple);
+            eva.getWeight();
+            eva.checkApple();
+            eva.getWeight();
+            console.log("weight adam : " + " " + adam.getWeight());
+            console.log("weight eva : " + " " + eva.getWeight());
+            console.log("weight apple : " + " " + apple.getWeight());
+            eva.say();
+        }
+
+</script>
+</body>
+</html>
